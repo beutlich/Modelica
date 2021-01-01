@@ -105,7 +105,7 @@ void ModelicaIO_readRealMatrix(_In_z_ const char* fileName,
     int verbose) {
     ModelicaNotExistError("ModelicaIO_readRealMatrix"); }
 int ModelicaIO_writeRealMatrix(_In_z_ const char* fileName,
-    _In_z_ const char* matrixName, _In_ double* matrix, size_t m, size_t n,
+    _In_z_ const char* matrixName, _In_ const double* matrix, size_t m, size_t n,
     int append, _In_z_ const char* version) {
     ModelicaNotExistError("ModelicaIO_writeRealMatrix"); return 0; }
 double* ModelicaIO_readRealTable(_In_z_ const char* fileName,
@@ -275,7 +275,7 @@ void ModelicaIO_readRealMatrix(_In_z_ const char* fileName,
 
 int ModelicaIO_writeRealMatrix(_In_z_ const char* fileName,
                                _In_z_ const char* matrixName,
-                               _In_ double* matrix, size_t m, size_t n,
+                               _In_ const double* matrix, size_t m, size_t n,
                                int append,
                                _In_z_ const char* version) {
     int status;
